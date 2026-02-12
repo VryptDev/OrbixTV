@@ -28,6 +28,14 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        splits {
+         abi {
+          enable true
+          reset()
+          include 'armeabi-v7a', 'arm64-v8a'
+          universalApk true
+        }
+      }
     }
 
     buildTypes {
